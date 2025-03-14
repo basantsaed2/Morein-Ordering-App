@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from "react-icons/ai"; // Importing icons
+import menu_one from "../../assets/Images/menu_one.png";
+import menu_two from "../../assets/Images/menu_two.png";
+import menu_three from "../../assets/Images/menu_three.png";
 
-const menuImages = [];
+const menuImages = [menu_one,menu_two,menu_three];
 
 const NewMenuPage = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -15,7 +18,7 @@ const NewMenuPage = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
       {menuImages.length > 0 ? (
         menuImages.map((src, index) => (
           <div key={index} className="overflow-hidden rounded-lg">
